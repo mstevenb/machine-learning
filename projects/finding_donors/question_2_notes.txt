@@ -1,0 +1,56 @@
+Decision tree
+ensemble(random forest)
+SVM
+K-NN
+
+############
+Decision Trees
+https://towardsdatascience.com/decision-trees-in-machine-learning-641b9c4e8052
+
+Strengths: 
+"feature importance is clear and relations can be viewed easily"
+Simple to understand, interpret, visualize.
+Decision trees implicitly perform variable screening or feature selection.
+Can handle both numerical and categorical data. Can also handle multi-output problems.
+Decision trees require relatively little effort from users for data preparation.
+Nonlinear relationships between parameters do not affect tree performance.
+
+Weaknesses:
+Decision-tree learners can create over-complex trees that do not generalize the data well. This is called overfitting.
+Decision trees can be unstable because small variations in the data might result in a completely different tree being generated. This is called variance, which needs to be lowered by methods like bagging and boosting.
+Greedy algorithms cannot guarantee to return the globally optimal decision tree. This can be mitigated by training multiple trees, where the features and samples are randomly sampled with replacement.
+Decision tree learners create biased trees if some classes dominate. It is therefore recommended to balance the data set prior to fitting with the decision tree.
+
+
+
+############
+K nearest neighbors
+https://brilliant.org/wiki/k-nearest-neighbors/
+
+Pros:
+
+Very easy to understand and implement. A k-NN implementation does not require much code and can be a quick and simple way to begin machine learning datasets.
+Does not assume any probability distributions on the input data. This can come in handy for inputs where the probability distribution is unknown and is therefore robust.
+Can quickly respond to changes in input. k-NN employs lazy learning, which generalizes during testing--this allows it to change during real-time use.
+Cons:
+
+Sensitive to localized data. Since k-NN gets all of its information from the input's neighbors, localized anomalies affect outcomes significantly, rather than for an algorithm that uses a generalized view of the data.
+Computation time. Lazy learning requires that most of k-NN's computation be done during testing, rather than during training. This can be an issue for large datasets.
+Normalization. If one type of category occurs much more than another, classifying an input will be more biased towards that one category (since it is more likely to be neighbors with the input). This can be mitigated by applying a lower weight to more common categories and a higher weight to less common categories; however, this can still cause errors near decision boundaries.
+Dimensions. In the case of many dimensions, inputs can commonly be "close" to many data points. This reduces the effectiveness of k-NN, since the algorithm relies on a correlation between closeness and similarity. One workaround for this issue is dimension reduction, which reduces the number of working variable dimensions (but can lose variable trends in the process).
+References
+Ajanki, A. Example of k-nearest neighbour classificationnb. Retrieved May 28, 2016, from https://en.wikipedia.org/wiki/K-nearest_neighbors_algorithm#/media/File:KnnClassification.svg
+Cite as: K-nearest Neighbors. Brilliant.org. Retrieved 08:26, August 14, 2018, from https://brilliant.org/wiki/k-nearest-neighbors/
+
+
+http://www2.cs.man.ac.uk/~raym8/comp37212/main/node264.html
+Pros:
+Simple to implement
+Flexible to feature / distance choices
+Naturally handles multi-class cases
+Can do well in practice with enough representative data
+Cons:
+Large search problem to find nearest neighbours
+Storage of data
+Must know we have a meaningful distance function
+
